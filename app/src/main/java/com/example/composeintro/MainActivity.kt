@@ -30,6 +30,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MyApp() {
 
+    //Hoisting the state
     var shouldShowOnboarding by remember { mutableStateOf(true) }
 
     if (shouldShowOnboarding) {
@@ -60,7 +61,7 @@ fun OnboardingScreen(onContinueClicked: () -> Unit) {
 }
 
 @Composable
-private fun Greetings(names: List<String> = listOf("World", "Compose")) {
+private fun Greetings(names: List<String> = listOf("World", "Sourabh")) {
     Column(modifier = Modifier.padding(vertical = 4.dp)) {
         for (name in names) {
             Greeting(name = name)
@@ -98,7 +99,7 @@ private fun Greeting(name: String) {
             OutlinedButton(
                 onClick = { expanded.value = !expanded.value }
             ) {
-                Text(if (expanded.value) "Show less" else "Show more")
+                Text(if (expanded.value) "Shrink" else "Expand")
             }
         }
     }
