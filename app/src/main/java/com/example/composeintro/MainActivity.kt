@@ -103,7 +103,12 @@ private fun Greeting(name: String) {
                     .weight(1f)
                     .padding(bottom = extraPadding.coerceAtLeast(0.dp))
             ) {
-                Text(text = "Hello, ")
+                Text(
+                    text = "Hello,",
+                    style = MaterialTheme.typography.h6.copy(
+                        fontWeight = FontWeight.Normal
+                    )
+                )
                 Text(
                     text = name,
                     style = MaterialTheme.typography.h3.copy(
