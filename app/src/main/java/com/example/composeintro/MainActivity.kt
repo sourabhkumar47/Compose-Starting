@@ -10,6 +10,7 @@ import androidx.compose.animation.core.spring
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -56,7 +57,8 @@ fun OnboardingScreen(onContinueClicked: () -> Unit) {
             Text("Welcome to the Basics Codelab!")
             Button(
                 modifier = Modifier.padding(vertical = 24.dp),
-                onClick = onContinueClicked
+                onClick = onContinueClicked,
+                shape = RoundedCornerShape(50.dp)
             ) {
                 Text("Continue")
             }
@@ -103,6 +105,7 @@ private fun Greeting(name: String) {
                 modifier = Modifier
                     .weight(1f)
                     .padding(bottom = extraPadding.coerceAtLeast(0.dp))
+
             ) {
                 Text(
                     text = "Hello,",
@@ -118,6 +121,7 @@ private fun Greeting(name: String) {
                 )
             }
             OutlinedButton(
+                shape = RoundedCornerShape(50.dp),
                 onClick = { expanded = !expanded }
             ) {
                 Text(if (expanded) "Shrink" else "Expand")
