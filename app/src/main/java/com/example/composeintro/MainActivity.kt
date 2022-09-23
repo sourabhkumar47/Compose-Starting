@@ -130,8 +130,7 @@ private fun CardContent(name: String) {
             )
             if (expanded) {
                 Text(
-                    text = ("Compose is fun. Compose is fun" +
-                            "Compose is fun, Compose is fun.").repeat(4),
+                    text = ("Compose is fun, Compose is fun.").repeat(4),
                 )
             }
         }
