@@ -1,12 +1,14 @@
 package com.example.composeintro
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
+import android.graphics.drawable.shapes.Shape
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -91,7 +93,10 @@ fun OnboardingPreview() {
 private fun Greeting(name: String) {
     Card(
         backgroundColor = MaterialTheme.colors.primary,
-        modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
+        shape = RoundedCornerShape(24.dp),
+        modifier = Modifier.padding(
+            vertical = 4.dp, horizontal = 8.dp
+        )
     ) {
         CardContent(name)
     }
